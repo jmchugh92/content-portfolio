@@ -6,7 +6,7 @@
   <title>Jackson McHugh | Content Portfolio</title>
   <meta
     name="description"
-    content="Content portfolio for Jackson McHugh featuring articles, videos, and downloadable files."
+    content="Content portfolio for Jackson McHugh featuring articles and embedded videos."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -166,7 +166,6 @@
     .section-copy,
     .card-copy,
     .note,
-    .file-description,
     .contact-copy,
     .footer-copy {
       color: var(--muted);
@@ -349,37 +348,6 @@
       padding-top: 4px;
     }
 
-    .full-width {
-      grid-column: span 12;
-    }
-
-    .file-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .file-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: center;
-      border: 1px solid var(--line);
-      padding: 16px;
-    }
-
-    .file-title {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 4px;
-    }
-
-    .file-description {
-      font-size: 0.92rem;
-    }
-
     .contact-block {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -419,8 +387,7 @@
     @media (max-width: 920px) {
       .hero-grid,
       .section-head,
-      .contact-block,
-      .file-item {
+      .contact-block {
         grid-template-columns: 1fr;
       }
 
@@ -453,7 +420,6 @@
       <div class="nav-links">
         <a href="#articles">Articles</a>
         <a href="#videos">Videos</a>
-        <a href="#files">Files</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -474,7 +440,6 @@
             <div class="button-row">
               <a class="button" href="#articles">View Articles</a>
               <a class="button" href="#videos">View Videos</a>
-              <a class="button" href="#files">Download Files</a>
             </div>
           </div>
 
@@ -486,7 +451,7 @@
             </div>
 
             <div class="hero-note">
-              A curated portfolio of articles, videos, decks, and downloadable work.
+              A curated portfolio of articles and embedded video work.
             </div>
           </div>
         </div>
@@ -498,32 +463,30 @@
         <div class="section-head">
           <div class="section-label">Articles</div>
           <div class="section-copy">
-            Selected writing, thought leadership, strategy content, and long-form materials.
-            Replace the placeholder links below with your real article links or hosted PDFs.
+            Selected writing, thought leadership, strategy content, and long-form materials.            
           </div>
         </div>
 
         <div class="grid">
           <article class="card">
             <div class="card-top">
-              <h3>Featured Article Title</h3>
+              <h3>Introduction to building automation</h3>
               <span class="meta">Article</span>
             </div>
 
             <p class="card-copy">
-              Brief description of the article, the audience it was written for, and the
-              business or strategic context behind it.
+              An introductory article to building automation, including an overview of the legacy tools and a comparison to Akila's cloud-based platform and different product features.
             </p>
 
             <div class="tags">
-              <span class="tag">Strategy</span>
-              <span class="tag">B2B</span>
-              <span class="tag">Thought Leadership</span>
+              <span class="tag">Explainer</span>
+              <span class="tag">Product marketing</span>
+              <span class="tag">Positioning</span>
             </div>
 
             <div class="embed article-frame">
               <iframe
-                src="https://example.com"
+                src="./files/Introduction to building automation.pdf"
                 title="Embedded article">
               </iframe>
             </div>
@@ -536,41 +499,45 @@
             <div class="link-row">
               <a
                 class="button"
-                href="https://example.com"
+                href="https://www.akila3d.com/blog/insights/introduction-to-building-management-systems/"
                 target="_blank"
                 rel="noopener noreferrer">
-                Read Original
+                Read on Akila3d.com
               </a>
             </div>
           </article>
 
           <article class="card">
             <div class="card-top">
-              <h3>White Paper Or Case Study</h3>
-              <span class="meta">PDF</span>
+              <h3>How pairing digital twin technology with AI could boost buildings’ emissions reductions</h3>
+              <span class="meta">Article</span>
             </div>
 
             <p class="card-copy">
-              Host long-form PDFs directly inside your repository and display them inside the
-              page for easy reading.
+              This thought leadership article about digital twins was published on the World Economic Forum website. Akila was a WEF Technology Pioneer 2022.
             </p>
 
             <div class="tags">
-              <span class="tag">Case Study</span>
-              <span class="tag">Sales Enablement</span>
-              <span class="tag">Download</span>
+              <span class="tag">Thought leadership</span>
+              <span class="tag">Market insight</span>
+              <span class="tag">Partner content</span>
             </div>
 
             <div class="embed article-frame">
               <iframe
-                src="./files/sample-white-paper.pdf"
-                title="Hosted PDF">
+                src="./files/WEF article digital twins.pdf"
+                title="Embedded article two">
               </iframe>
             </div>
 
             <div class="link-row">
-              <a class="button" href="./files/sample-white-paper.pdf" target="_blank">Open PDF</a>
-              <a class="button" href="./files/sample-white-paper.pdf" download>Download PDF</a>
+              <a
+                class="button"
+                href="https://www.weforum.org/stories/2024/03/how-digital-twin-technology-can-work-with-ai-to-boost-buildings-emissions-reductions/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Read on the World Economic Forum site
+              </a>
             </div>
           </article>
         </div>
@@ -582,36 +549,40 @@
         <div class="section-head">
           <div class="section-label">Videos</div>
           <div class="section-copy">
-            Embedded presentations, product demos, walkthroughs, interviews, or recorded talks.
-            YouTube and Vimeo embeds work best.
+            Embedded talks, demos, interviews, presentations, and walkthroughs. Paste YouTube,
+            Vimeo, or Loom embed links directly into the iframe <code>src</code>.
           </div>
         </div>
 
         <div class="grid">
           <article class="card">
             <div class="card-top">
-              <h3>Campaign Teardown Or Presentation</h3>
-              <span class="meta">YouTube</span>
+              <h3>Presentation Or Recorded Talk</h3>
+              <span class="meta">Video</span>
             </div>
 
             <p class="card-copy">
-              Use this space for webinars, event sessions, explainers, or commercial content
-              tied to launches and campaigns.
+              Use this card for webinars, speaking clips, campaign explainers, or event
+              presentations. Replace the iframe source with your own embed link.
             </p>
 
             <div class="tags">
               <span class="tag">Presentation</span>
+              <span class="tag">Speaking</span>
               <span class="tag">Video</span>
-              <span class="tag">Marketing</span>
             </div>
 
             <div class="embed ratio-video">
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
+                title="Embedded YouTube video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
               </iframe>
+            </div>
+
+            <div class="note">
+              For YouTube, use the embed format: <strong>https://www.youtube.com/embed/VIDEO_ID</strong>
             </div>
 
             <div class="link-row">
@@ -620,7 +591,7 @@
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
                 rel="noopener noreferrer">
-                Watch On YouTube
+                Open Original
               </a>
             </div>
           </article>
@@ -628,12 +599,12 @@
           <article class="card">
             <div class="card-top">
               <h3>Demo Or Walkthrough</h3>
-              <span class="meta">Vimeo</span>
+              <span class="meta">Video</span>
             </div>
 
             <p class="card-copy">
-              Use Vimeo, Loom, or another hosted player for product walkthroughs, portfolio
-              explanations, or concise recorded demos.
+              Use this slot for a product demo, content walkthrough, interview, or a short
+              portfolio explainer hosted on Vimeo or Loom.
             </p>
 
             <div class="tags">
@@ -645,10 +616,14 @@
             <div class="embed ratio-video">
               <iframe
                 src="https://player.vimeo.com/video/76979871"
-                title="Embedded video"
+                title="Embedded Vimeo video"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen>
               </iframe>
+            </div>
+
+            <div class="note">
+              For Vimeo, use the embed format: <strong>https://player.vimeo.com/video/VIDEO_ID</strong>
             </div>
 
             <div class="link-row">
@@ -665,65 +640,6 @@
       </div>
     </section>
 
-    <section id="files">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-label">Files</div>
-          <div class="section-copy">
-            Downloadable PDFs, resumes, case studies, decks, and writing samples hosted
-            directly in your repository.
-          </div>
-        </div>
-
-        <div class="grid">
-          <div class="card full-width">
-            <div class="card-top">
-              <h3>Downloadable Work</h3>
-              <span class="meta">Library</span>
-            </div>
-
-            <div class="file-list">
-              <div class="file-item">
-                <div>
-                  <span class="file-title">Resume.pdf</span>
-                  <div class="file-description">Latest resume or profile document.</div>
-                </div>
-
-                <div class="button-row">
-                  <a class="button" href="./files/Resume.pdf" target="_blank">Open</a>
-                  <a class="button" href="./files/Resume.pdf" download>Download</a>
-                </div>
-              </div>
-
-              <div class="file-item">
-                <div>
-                  <span class="file-title">CaseStudy.pdf</span>
-                  <div class="file-description">Example long-form writing or strategy sample.</div>
-                </div>
-
-                <div class="button-row">
-                  <a class="button" href="./files/CaseStudy.pdf" target="_blank">Open</a>
-                  <a class="button" href="./files/CaseStudy.pdf" download>Download</a>
-                </div>
-              </div>
-
-              <div class="file-item">
-                <div>
-                  <span class="file-title">Deck.pdf</span>
-                  <div class="file-description">Presentation or visual content sample.</div>
-                </div>
-
-                <div class="button-row">
-                  <a class="button" href="./files/Deck.pdf" target="_blank">Open</a>
-                  <a class="button" href="./files/Deck.pdf" download>Download</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="contact">
       <div class="container">
         <div class="contact-block">
@@ -731,8 +647,7 @@
             <div class="section-label">Contact</div>
             <h2>Let’s Build Something Sharp</h2>
             <p class="contact-copy">
-              Replace this section with your preferred call to action, email, LinkedIn profile,
-              or inquiry language for freelance, full-time, or consulting opportunities.
+              If you're ready to make something great together, let's talk!
             </p>
           </div>
 
@@ -748,7 +663,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-copy">
-        Static HTML Portfolio / GitHub Pages Ready
+        This is vibecoded. If something is broken, I am happy to share the content directly.
       </div>
     </div>
   </footer>
