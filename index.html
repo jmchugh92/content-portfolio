@@ -306,6 +306,32 @@
       gap: 22px;
     }
 
+   .content-articles,
+    .content-videos {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+    }
+
+    .content-articles {
+      margin-bottom: 22px;
+    }
+
+    .content-articles .card-link {
+      grid-column: span 4;
+    }
+
+    .content-videos > article {
+      grid-column: span 6;
+    }
+
+    @media (max-width: 980px) {
+      .content-articles .card-link,
+      .content-videos > article {
+        grid-column: span 12;
+      }
+}
+
     .card-link {
       grid-column: span 6;
       display: block;
@@ -576,198 +602,182 @@
       </div>
     </section>
 
-    <section id="content">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-label">Content</div>
-          </div>
-          <div class="section-copy">
-            Selected writing, thought leadership articles, press releases, and video content. Article details below were pulled from the code you attached. :contentReference[oaicite:1]{index=1}
-          </div>
-        </div>
-
-        <div class="grid">
-          <a class="card-link" href="./files/Introduction to building automation.pdf" target="_blank" rel="noopener noreferrer">
-            <article class="card">
-              <div class="card-top">
-                <h3>Introduction To Building Automation</h3>
-                <span class="meta">Article</span>
-              </div>
-
-              <p class="card-copy">
-                An introductory article to building automation, including an overview of the legacy tools and a comparison to Akila's cloud-based platform and different product features.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Explainer</span>
-                <span class="tag">Product Marketing</span>
-                <span class="tag">Positioning</span>
-              </div>
-
-              <div class="featured-image">
-                <img src="./photos/buildingautomation.webp" alt="Featured image for Introduction to Building Automation" />
-              </div>
-
-              <div class="link-row">
-                <span class="button accent">Open PDF</span>
-                <a
-                  class="button accent"
-                  href="https://www.akila3d.com/blog/insights/introduction-to-building-management-systems/"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Open Original Site
-                </a>
-              </div>
-            </article>
-          </a>
-
-          <a class="card-link" href="./files/WEF article digital twins.pdf" target="_blank" rel="noopener noreferrer">
-            <article class="card">
-              <div class="card-top">
-                <h3>How Pairing Digital Twin Technology With AI Could Boost Buildings’ Emissions Reductions</h3>
-                <span class="meta">Article</span>
-              </div>
-
-              <p class="card-copy">
-                This thought leadership article about digital twins was published on the World Economic Forum website. Akila was a WEF Technology Pioneer 2022.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Thought Leadership</span>
-                <span class="tag">Market Insight</span>
-                <span class="tag">Partner Content</span>
-              </div>
-
-              <div class="featured-image">
-                <img src="./photos/akila-WEF.jpg" alt="Featured image for WEF digital twins article" />
-              </div>
-
-              <div class="link-row">
-                <span class="button accent">Open PDF</span>
-                <a
-                  class="button accent"
-                  href="https://www.weforum.org/stories/2024/03/how-digital-twin-technology-can-work-with-ai-to-boost-buildings-emissions-reductions/"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Open Original Site
-                </a>
-              </div>
-            </article>
-          </a>
-
-          <a class="card-link" href="./files/Akila-Deloitte-Press-Release.pdf" target="_blank" rel="noopener noreferrer">
-            <article class="card">
-              <div class="card-top">
-                <h3>Akila and Deloitte form Strategic Alliance</h3>
-                <span class="meta">Press Release</span>
-              </div>
-
-              <p class="card-copy">
-                This was the announcement of Akila's partnership with Deloitte, formatted in our house style for Press Releases
-              </p>
-
-              <div class="tags">
-                <span class="tag">Article</span>
-                <span class="tag">Writing</span>
-                <span class="tag">Content</span>
-              </div>
-
-              <div class="featured-image">
-                <img src="./photos/Akila-deloitte.webp" alt="Featured image for third article" />
-              </div>
-
-              <div class="link-row">
-                <span class="button accent">Open PDF</span>
-                <a
-                  class="button accent"
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Open Original Site
-                </a>
-              </div>
-            </article>
-          </a>
-
-          <article class="card-link">
-            <div class="card">
-              <div class="card-top">
-                <h3>Embedded Video Title</h3>
-                <span class="meta">Video</span>
-              </div>
-
-              <p class="card-copy">
-                Use this for a webinar, interview, recorded talk, campaign explainer, or portfolio walkthrough.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Video</span>
-                <span class="tag">Presentation</span>
-                <span class="tag">Speaking</span>
-              </div>
-
-              <div class="video-embed">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Embedded YouTube video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
-              </div>
-
-              <div class="link-row">
-                <a
-                  class="button accent"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Open Original
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card-link">
-            <div class="card">
-              <div class="card-top">
-                <h3>Second Embedded Video</h3>
-                <span class="meta">Video</span>
-              </div>
-
-              <p class="card-copy">
-                Use another slot for Vimeo or Loom when you want the video visible directly on the page.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Demo</span>
-                <span class="tag">Walkthrough</span>
-                <span class="tag">Content</span>
-              </div>
-
-              <div class="video-embed">
-                <iframe
-                  src="https://player.vimeo.com/video/76979871"
-                  title="Embedded Vimeo video"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-
-              <div class="link-row">
-                <a
-                  class="button accent"
-                  href="https://vimeo.com/76979871"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Open Original
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
+   <section id="content">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Content</div>
       </div>
-    </section>
+      <div class="section-copy">
+        Selected writing, thought leadership articles, press releases, and video content.
+      </div>
+    </div>
+
+    <div class="content-articles">
+      <a class="card-link" href="./files/Introduction to building automation.pdf" target="_blank" rel="noopener noreferrer">
+        <article class="card">
+          <div class="card-top">
+            <h3>Introduction To Building Automation</h3>
+            <span class="meta">Article</span>
+          </div>
+
+          <p class="card-copy">
+            An introductory article to building automation, including an overview of the legacy tools and a comparison to Akila's cloud-based platform and different product features.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Explainer</span>
+            <span class="tag">Product Marketing</span>
+            <span class="tag">Positioning</span>
+          </div>
+
+          <div class="featured-image">
+            <img src="./photos/buildingautomation.webp" alt="Featured image for Introduction to Building Automation" />
+          </div>
+
+          <div class="link-row">
+            <span class="button accent">Open PDF</span>
+            <span class="button accent">Open Original Site</span>
+          </div>
+        </article>
+      </a>
+
+      <a class="card-link" href="./files/WEF article digital twins.pdf" target="_blank" rel="noopener noreferrer">
+        <article class="card">
+          <div class="card-top">
+            <h3>How Pairing Digital Twin Technology With AI Could Boost Buildings’ Emissions Reductions</h3>
+            <span class="meta">Article</span>
+          </div>
+
+          <p class="card-copy">
+            This thought leadership article about digital twins was published on the World Economic Forum website. Akila was a WEF Technology Pioneer 2022.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Thought Leadership</span>
+            <span class="tag">Market Insight</span>
+            <span class="tag">Partner Content</span>
+          </div>
+
+          <div class="featured-image">
+            <img src="./photos/akila-WEF.jpg" alt="Featured image for WEF digital twins article" />
+          </div>
+
+          <div class="link-row">
+            <span class="button accent">Open PDF</span>
+            <span class="button accent">Open Original Site</span>
+          </div>
+        </article>
+      </a>
+
+      <a class="card-link" href="./files/Akila-Deloitte-Press-Release.pdf" target="_blank" rel="noopener noreferrer">
+        <article class="card">
+          <div class="card-top">
+            <h3>Akila And Deloitte Form Strategic Alliance</h3>
+            <span class="meta">Press Release</span>
+          </div>
+
+          <p class="card-copy">
+            This was the announcement of Akila's partnership with Deloitte, formatted in our house style for Press Releases.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Article</span>
+            <span class="tag">Writing</span>
+            <span class="tag">Content</span>
+          </div>
+
+          <div class="featured-image">
+            <img src="./photos/Akila-deloitte.webp" alt="Featured image for Akila Deloitte press release" />
+          </div>
+
+          <div class="link-row">
+            <span class="button accent">Open PDF</span>
+            <span class="button accent">Open Original Site</span>
+          </div>
+        </article>
+      </a>
+    </div>
+
+    <div class="content-videos">
+      <article>
+        <div class="card">
+          <div class="card-top">
+            <h3>Embedded Video Title</h3>
+            <span class="meta">Video</span>
+          </div>
+
+          <p class="card-copy">
+            Use this for a webinar, interview, recorded talk, campaign explainer, or portfolio walkthrough.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Video</span>
+            <span class="tag">Presentation</span>
+            <span class="tag">Speaking</span>
+          </div>
+
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Embedded YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="link-row">
+            <a
+              class="button accent"
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer">
+              Open Original
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <div class="card-top">
+            <h3>Second Embedded Video</h3>
+            <span class="meta">Video</span>
+          </div>
+
+          <p class="card-copy">
+            Use another slot for Vimeo or Loom when you want the video visible directly on the page.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Demo</span>
+            <span class="tag">Walkthrough</span>
+            <span class="tag">Content</span>
+          </div>
+
+          <div class="video-embed">
+            <iframe
+              src="https://player.vimeo.com/video/76979871"
+              title="Embedded Vimeo video"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="link-row">
+            <a
+              class="button accent"
+              href="https://vimeo.com/76979871"
+              target="_blank"
+              rel="noopener noreferrer">
+              Open Original
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
     <section id="contact" class="contact">
       <div class="container">
@@ -804,9 +814,6 @@
         This is vibecoded. If something is broken, I am happy to share the content directly.
       </div>
     </div>
-  </footer>
-</body>
-</html>
   </footer>
 </body>
 </html>
