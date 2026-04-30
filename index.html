@@ -306,7 +306,7 @@
       gap: 22px;
     }
 
-   .content-articles,
+    .content-articles,
     .content-videos {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -324,13 +324,6 @@
     .content-videos > article {
       grid-column: span 6;
     }
-
-    @media (max-width: 980px) {
-      .content-articles .card-link,
-      .content-videos > article {
-        grid-column: span 12;
-      }
-}
 
     .card-link {
       grid-column: span 6;
@@ -415,6 +408,55 @@
       height: 100%;
     }
 
+    .video-thumb {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-thumb-link {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-thumb-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 72px;
+      height: 72px;
+      transform: translate(-50%, -50%);
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      background: rgba(31, 31, 127, 0.88);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .play-triangle {
+      width: 0;
+      height: 0;
+      margin-left: 4px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 16px solid #ffffff;
+    }
+
+    .video-thumb-link:hover .play-button {
+      transform: translate(-50%, -50%) scale(1.05);
+      background: rgba(31, 31, 127, 1);
+    }
+
     .link-row {
       display: flex;
       flex-wrap: wrap;
@@ -474,6 +516,8 @@
         justify-content: flex-start;
       }
 
+      .content-articles .card-link,
+      .content-videos > article,
       .card-link,
       .grid > article {
         grid-column: span 12;
@@ -499,69 +543,18 @@
         flex-basis: 14px;
         margin-top: 8px;
       }
+
+      .play-button {
+        width: 58px;
+        height: 58px;
+      }
+
+      .play-triangle {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 13px solid #ffffff;
+      }
     }
-.video-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.video-thumb-link {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.video-thumb-link img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 72px;
-  height: 72px;
-  transform: translate(-50%, -50%);
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  background: rgba(31, 31, 127, 0.88);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.18s ease, background 0.18s ease;
-}
-
-.play-triangle {
-  width: 0;
-  height: 0;
-  margin-left: 4px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 16px solid #ffffff;
-}
-
-.video-thumb-link:hover .play-button {
-  transform: translate(-50%, -50%) scale(1.05);
-  background: rgba(31, 31, 127, 1);
-}
-
-@media (max-width: 640px) {
-  .play-button {
-    width: 58px;
-    height: 58px;
-  }
-
-  .play-triangle {
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 13px solid #ffffff;
-  }
-}
-    
   </style>
 </head>
 <body>
@@ -600,7 +593,6 @@
               Strategy, content, and commercial storytelling across built environment,
               smart energy, and B2B technology.
             </p>
-            
           </div>
 
           <div class="hero-side">
@@ -609,8 +601,6 @@
               <div>Go-To-Market Strategy</div>
               <div>Sales Enablement</div>
             </div>
-
-          
           </div>
         </div>
       </div>
@@ -658,189 +648,192 @@
       </div>
     </section>
 
-   <section id="content">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="section-label">Content</div>
-      </div>
-      <div class="section-copy">
-        Selected writing, thought leadership articles, press releases, and video content.
-      </div>
-    </div>
-
-    <div class="content-articles">
-  <div class="card-link">
-    <article class="card">
-      <div class="card-top">
-        <h3>Introduction To Building Automation</h3>
-        <span class="meta">Article</span>
-      </div>
-
-      <p class="card-copy">
-        An introductory article to building automation, including an overview of the legacy tools and a comparison to Akila's cloud-based platform and different product features.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Product Marketing</span>
-        <span class="tag">Positioning</span>
-      </div>
-
-      <div class="featured-image">
-        <img src="./photos/buildingautomation.webp" alt="Featured image for Introduction to Building Automation" />
-      </div>
-
-      <div class="link-row">
-        <a class="button accent" href="./files/Introduction to building automation.pdf" target="_blank" rel="noopener noreferrer">
-          Open PDF
-        </a>
-        <a class="button accent" href="https://www.akila3d.com/blog/insights/introduction-to-building-management-systems/" target="_blank" rel="noopener noreferrer">
-          Open Original Site
-        </a>
-      </div>
-    </article>
-  </div>
-
-  <div class="card-link">
-    <article class="card">
-      <div class="card-top">
-        <h3>How Pairing Digital Twin Technology With AI Could Boost Buildings’ Emissions Reductions</h3>
-        <span class="meta">Article</span>
-      </div>
-
-      <p class="card-copy">
-        This thought leadership article about digital twins was published on the World Economic Forum website. Akila is a WEF Technology Pioneer.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Thought Leadership</span>
-        <span class="tag">Partner Content</span>
-      </div>
-
-      <div class="featured-image">
-        <img src="./photos/akila-WEF.jpg" alt="Featured image for WEF digital twins article" />
-      </div>
-
-      <div class="link-row">
-        <a class="button accent" href="./files/WEF article digital twins.pdf" target="_blank" rel="noopener noreferrer">
-          Open PDF
-        </a>
-        <a class="button accent" href="https://www.weforum.org/stories/2024/03/how-digital-twin-technology-can-work-with-ai-to-boost-buildings-emissions-reductions/" target="_blank" rel="noopener noreferrer">
-          Open Original Site
-        </a>
-      </div>
-    </article>
-  </div>
-
-  <div class="card-link">
-    <article class="card">
-      <div class="card-top">
-        <h3>Akila And Deloitte Form Strategic Alliance</h3>
-        <span class="meta">Press Release</span>
-      </div>
-
-      <p class="card-copy">
-        Original announcement of Akila's partnership with Deloitte, picked up in various other outlets.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Partnerships</span>
-        <span class="tag">Positioning</span>
-      </div>
-
-      <div class="featured-image">
-        <img src="./photos/Akila-deloitte.webp" alt="Featured image for Akila Deloitte press release" />
-      </div>
-
-      <div class="link-row">
-        <a class="button accent" href="./files/Akila-Deloitte-Press-Release.pdf" target="_blank" rel="noopener noreferrer">
-          Open PDF
-        </a>
-        <a class="button accent" href="https://www.akila3d.com/blog/akila-and-deloitte-form-strategic-alliance-to-offer-sustainable-digital-twin-software-solutions-for-building-management/" target="_blank" rel="noopener noreferrer">
-          Open Original Site
-        </a>
-      </div>
-    </article>
-  </div>
-</div>
-
-    <div class="content-videos">
-      <article>
-        <div class="card">
-          <div class="card-top">
-            <h3>Akila Brand Video</h3>
-            <span class="meta">Video</span>
+    <section id="content">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Content</div>
           </div>
-
-          <p class="card-copy">
-            This is the first brand video that Akila launched with for our go-to-market.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Branding</span>            
-          </div>
-
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/REM8fOqgs6w"
-              title="Embedded YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="link-row">
-            <a
-              class="button accent"
-              href="https://www.youtube.com/watch?v=REM8fOqgs6w"
-              target="_blank"
-              rel="noopener noreferrer">
-              Open on Youtube
-            </a>
+          <div class="section-copy">
+            Selected writing, thought leadership articles, press releases, and video content.
           </div>
         </div>
-      </article>
 
-      <article>
-        <div class="card">
-          <div class="card-top">
-            <h3>Aden Energies Brand Video</h3>
-            <span class="meta">Video</span>
+        <div class="content-articles">
+          <div class="card-link">
+            <article class="card">
+              <div class="card-top">
+                <h3>Introduction To Building Automation</h3>
+                <span class="meta">Article</span>
+              </div>
+
+              <p class="card-copy">
+                An introductory article to building automation, including an overview of the legacy tools and a comparison to Akila's cloud-based platform and different product features.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Product Marketing</span>
+                <span class="tag">Positioning</span>
+              </div>
+
+              <div class="featured-image">
+                <img src="./photos/buildingautomation.webp" alt="Featured image for Introduction to Building Automation" />
+              </div>
+
+              <div class="link-row">
+                <a class="button accent" href="./files/Introduction to building automation.pdf" target="_blank" rel="noopener noreferrer">
+                  Open PDF
+                </a>
+                <a class="button accent" href="https://www.akila3d.com/blog/insights/introduction-to-building-management-systems/" target="_blank" rel="noopener noreferrer">
+                  Open Original Site
+                </a>
+              </div>
+            </article>
           </div>
 
-          <p class="card-copy">
-            This is another brand video for Aden Energies (formerly Tera energies).
-          </p>
+          <div class="card-link">
+            <article class="card">
+              <div class="card-top">
+                <h3>How Pairing Digital Twin Technology With AI Could Boost Buildings’ Emissions Reductions</h3>
+                <span class="meta">Article</span>
+              </div>
 
-          <div class="tags">
-            <span class="tag">Branding</span>
-            
+              <p class="card-copy">
+                This thought leadership article about digital twins was published on the World Economic Forum website. Akila is a WEF Technology Pioneer.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Thought Leadership</span>
+                <span class="tag">Partner Content</span>
+              </div>
+
+              <div class="featured-image">
+                <img src="./photos/akila-WEF.jpg" alt="Featured image for WEF digital twins article" />
+              </div>
+
+              <div class="link-row">
+                <a class="button accent" href="./files/WEF article digital twins.pdf" target="_blank" rel="noopener noreferrer">
+                  Open PDF
+                </a>
+                <a class="button accent" href="https://www.weforum.org/stories/2024/03/how-digital-twin-technology-can-work-with-ai-to-boost-buildings-emissions-reductions/" target="_blank" rel="noopener noreferrer">
+                  Open Original Site
+                </a>
+              </div>
+            </article>
           </div>
-            <div class="featured-image video-thumb">
+
+          <div class="card-link">
+            <article class="card">
+              <div class="card-top">
+                <h3>Akila And Deloitte Form Strategic Alliance</h3>
+                <span class="meta">Press Release</span>
+              </div>
+
+              <p class="card-copy">
+                Original announcement of Akila's partnership with Deloitte, picked up in various other outlets.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Partnerships</span>
+                <span class="tag">Positioning</span>
+              </div>
+
+              <div class="featured-image">
+                <img src="./photos/Akila-deloitte.webp" alt="Featured image for Akila Deloitte press release" />
+              </div>
+
+              <div class="link-row">
+                <a class="button accent" href="./files/Akila-Deloitte-Press-Release.pdf" target="_blank" rel="noopener noreferrer">
+                  Open PDF
+                </a>
+                <a class="button accent" href="https://www.akila3d.com/blog/akila-and-deloitte-form-strategic-alliance-to-offer-sustainable-digital-twin-software-solutions-for-building-management/" target="_blank" rel="noopener noreferrer">
+                  Open Original Site
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="content-videos">
+          <article>
+            <div class="card">
+              <div class="card-top">
+                <h3>Akila Brand Video</h3>
+                <span class="meta">Video</span>
+              </div>
+
+              <p class="card-copy">
+                This is the first brand video that Akila launched with for our go-to-market.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Branding</span>
+              </div>
+
+              <div class="video-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/REM8fOqgs6w"
+                  title="Akila brand video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <div class="link-row">
+                <a
+                  class="button accent"
+                  href="https://www.youtube.com/watch?v=REM8fOqgs6w"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Open on YouTube
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="card">
+              <div class="card-top">
+                <h3>Aden Energies Brand Video</h3>
+                <span class="meta">Video</span>
+              </div>
+
+              <p class="card-copy">
+                This is another brand video for Aden Energies (formerly Tera Energies).
+              </p>
+
+              <div class="tags">
+                <span class="tag">Branding</span>
+              </div>
+
+              <div class="featured-image video-thumb">
                 <a
                   class="video-thumb-link"
                   href="https://adenenergies.com/wp-content/uploads/2021/09/EN_Long-Version_v2.mp4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open Aden Energies website">
-    
-                      <img src="./photos/adenergies-preview.png" alt="Preview of Aden Energies website" />
-  
+                  aria-label="Open Aden Energies video">
+                  <img src="./photos/adenergies-preview.png" alt="Preview of Aden Energies brand video" />
+                  <span class="play-button" aria-hidden="true">
+                    <span class="play-triangle"></span>
+                  </span>
+                </a>
+              </div>
 
-          <div class="link-row">
-            <a
-              class="button accent"
-              href="https://adenenergies.com/video-aden-energies-change-starts-here/"
-              target="_blank"
-              rel="noopener noreferrer">
-              Open on adenenergies.com
-            </a>
-          </div>
+              <div class="link-row">
+                <a
+                  class="button accent"
+                  href="https://adenenergies.com/video-aden-energies-change-starts-here/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Open on adenenergies.com
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <section id="contact" class="contact">
       <div class="container">
@@ -849,7 +842,7 @@
             <div class="section-label">Contact</div>
           </div>
           <div class="section-copy">
-           Go-to-market, content marketing, and demand generation.
+            Go-to-market, content marketing, and demand generation.
           </div>
         </div>
 
